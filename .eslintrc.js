@@ -1,0 +1,35 @@
+module.exports = {
+  root: true,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: ['./tsconfig.json'],
+    tsconfigRootDir: __dirname,
+    sourceType: 'module',
+    ecmaVersion: 2020,
+  },
+  plugins: ['@typescript-eslint', 'n8n-nodes-base'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:n8n-nodes-base/community',
+    'prettier',
+  ],
+  env: {
+    node: true,
+    es2020: true,
+    jest: true,
+  },
+  rules: {
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'warn',
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
+    'prefer-const': 'error',
+    'no-var': 'error',
+    'eqeqeq': ['error', 'always'],
+    'curly': ['error', 'all'],
+  },
+  ignorePatterns: ['dist/', 'node_modules/', '*.js', 'gulpfile.js'],
+};

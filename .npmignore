@@ -1,0 +1,39 @@
+# Source files (publish dist only)
+credentials/
+nodes/
+index.ts
+*.ts
+!*.d.ts
+
+# Configuration
+tsconfig.json
+.eslintrc.js
+.prettierrc
+gulpfile.js
+jest.config.js
+
+# Tests
+test/
+coverage/
+*.test.ts
+*.spec.ts
+
+# Development
+.github/
+.vscode/
+.idea/
+scripts/
+
+# Documentation source
+docs/
+
+# Git
+.git/
+.gitignore
+
+# Other
+node_modules/
+*.log
+.env*
+tmp/
+temp/
